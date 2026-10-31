@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em Memória - Ede Curitiba</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-100 text-stone-800 font-sans min-h-screen flex items-center justify-center p-4">
+
+    <div class="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center border border-stone-200">
+        
+        <!-- FOTO PRINCIPAL -->
+        <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-amber-600/40 shadow-md bg-stone-200">
+            <img id="foto-principal" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600" alt="Ede Curitiba" class="w-full h-full object-cover">
+        </div>
+
+        <!-- NOME E DATAS -->
+        <h1 class="text-3xl font-bold text-stone-900 mb-1">Ede Curitiba</h1>
+        <p class="text-sm font-medium text-amber-800 mb-6">
+            ★ 25/07/1948 &nbsp;•&nbsp; ✝ 14/11/2025
+        </p>
+
+        <p class="text-stone-600 text-sm mb-6 leading-relaxed italic">
+            "Para sempre em nossas memórias e em nossos corações."
+        </p>
+
+        <!-- BOTÃO DE DEIXAR FLOR (CONTADOR) -->
+        <div class="mb-6 bg-amber-50 p-4 rounded-xl border border-amber-200">
+            <button onclick="deixarFlor()" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-2.5 px-4 rounded-lg transition shadow-sm text-sm flex items-center justify-center gap-2">
+                <span>🌷</span> Deixar uma Flor em Homenagem
+            </button>
+            <p class="text-xs text-amber-900 mt-2 font-medium">
+                <span id="contador-flores">0</span> pessoas já deixaram flores.
+            </p>
+        </div>
+
+        <!-- BOTÕES PARA GALERIA DE FOTOS E VÍDEOS -->
+        <div class="space-y-3">
+            <a href="https://photos.google.com" target="_blank" class="block w-full bg-stone-100 hover:bg-stone-200 text-stone-800 font-medium py-3 px-4 rounded-xl transition shadow-sm text-sm border border-stone-200">
+                📸 Ver Galeria de Fotos
+            </a>
+
+            <a href="https://youtube.com" target="_blank" class="block w-full bg-stone-800 hover:bg-stone-900 text-white font-medium py-3 px-4 rounded-xl transition shadow-sm text-sm">
+                🎥 Ver Homenagens em Vídeo
+            </a>
+        </div>
+
+        <!-- RODAPÉ -->
+        <div class="border-t border-stone-100 mt-8 pt-4">
+            <p class="text-xs text-stone-400">Memorial Digital • Ede Curitiba</p>
+        </div>
+
+    </div>
+
+    <script>
+        // Sistema simples para contar as flores e salvar no navegador
+        function atualizarContador() {
+            let total = localStorage.getItem('total_flores_ede') || 14; // Começa com um número base simulado ou 0
+            document.getElementById('contador-flores').innerText = total;
+        }
+
+        function deixarFlor() {
+            let total = parseInt(localStorage.getItem('total_flores_ede') || 14);
+            total += 1;
+            localStorage.setItem('total_flores_ede', total);
+            document.getElementById('contador-flores').innerText = total;
+            alert('Obrigado por deixar sua flor em memória de Ede Curitiba 🌷');
+        }
+
+        window.onload = atualizarContador;
+    </script>
+</body>
+</html>
