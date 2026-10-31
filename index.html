@@ -56,7 +56,7 @@
     <script>
         // Sistema simples para contar as flores e salvar no navegador
         function atualizarContador() {
-            let total = localStorage.getItem('total_flores_ede') || 14; // Começa com um número base simulado ou 0
+            let total = localStorage.getItem('total_flores_ede') || 0; // Começa com um número base simulado ou 0
             document.getElementById('contador-flores').innerText = total;
         }
 
