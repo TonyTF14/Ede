@@ -4,70 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Em Memória - Ede Curitiba</title>
-    <!-- Tailwind CSS para design elegante -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fontes clássicas e suaves -->
+    <!-- Fontes Clássicas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .font-serif { font-family: 'Cormorant Garamond', serif; }
+        .ornament-line {
+            background: linear-gradient(90deg, transparent 0%, rgba(217, 119, 6, 0.4) 50%, transparent 100%);
+        }
     </style>
 </head>
-<body class="bg-stone-50 text-stone-800 antialiased selection:bg-amber-200 selection:text-amber-900 min-h-screen flex flex-col justify-between">
+<body class="bg-stone-100 text-stone-800 antialiased selection:bg-amber-200 selection:text-amber-900 min-h-screen flex flex-col justify-between border-t-4 border-amber-600">
 
-    <!-- CABEÇALHO / HERO -->
-    <header class="py-12 sm:py-16 px-4 bg-gradient-to-b from-stone-900 via-stone-800 to-stone-900 text-stone-100 text-center relative shadow-lg">
+    <!-- CABEÇALHO COM ORNAMENTOS -->
+    <header class="py-14 sm:py-20 px-4 bg-gradient-to-b from-stone-900 via-stone-850 to-stone-900 text-stone-100 text-center relative shadow-xl overflow-hidden">
+        <!-- Detalhes decorativos sutis ao fundo -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d97706_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
         <div class="max-w-xl mx-auto relative z-10">
-            <!-- FOTO PRINCIPAL COM MOLDURA ELEGANTE -->
-            <div class="w-36 h-36 sm:w-44 sm:h-44 mx-auto mb-6 rounded-full overflow-hidden border-4 border-amber-600/50 shadow-2xl bg-stone-700">
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600" alt="Ede Curitiba" class="w-full h-full object-cover">
+            <!-- FOTO PRINCIPAL COM MOLDURA DUPLA DOURADA -->
+            <div class="relative w-40 h-40 sm:w-48 sm:h-48 mx-auto mb-6">
+                <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-amber-600/40 via-amber-400/60 to-amber-600/40 blur-sm"></div>
+                <div class="relative w-full h-full rounded-full overflow-hidden border-4 border-amber-500/80 shadow-2xl bg-stone-800">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600" alt="Ede Curitiba" class="w-full h-full object-cover">
+                </div>
             </div>
 
-            <h1 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-amber-100 mb-2">
+            <!-- NOME E DATAS -->
+            <h1 class="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-amber-100 mb-2 drop-shadow-sm">
                 Ede Curitiba
             </h1>
-            <p class="text-xs sm:text-sm text-amber-200/80 font-medium tracking-widest uppercase mb-4">
-                ★ 25/07/1948 &nbsp;•&nbsp; ✝ 14/11/2025
-            </p>
-            <p class="font-serif italic text-base sm:text-lg text-stone-300 max-w-md mx-auto leading-relaxed border-t border-stone-700/60 pt-4">
-                "Para sempre em nossas memórias e em nossos corações."
+
+            <div class="flex items-center justify-center gap-3 my-3">
+                <div class="h-px w-12 ornament-line"></div>
+                <p class="text-xs sm:text-sm text-amber-200/90 font-medium tracking-widest uppercase">
+                    ★ 25/07/1948 &nbsp;•&nbsp; ✝ 14/11/2025
+                </p>
+                <div class="h-px w-12 ornament-line"></div>
+            </div>
+
+            <p class="font-serif italic text-lg sm:text-xl text-stone-300 max-w-md mx-auto leading-relaxed pt-2">
+                "Aquele que amamos nunca morre, apenas parte antes de nós."
             </p>
         </div>
     </header>
 
-    <main class="max-w-xl mx-auto px-4 py-8 w-full space-y-8">
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="max-w-xl mx-auto px-4 py-10 w-full space-y-8">
 
-        <!-- BOTÃO DE HOMENAGEM / DEIXAR FLOR -->
-        <section class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center">
-            <h2 class="font-serif text-2xl font-bold text-stone-900 mb-1">Preste sua Homenagem</h2>
-            <p class="text-xs text-stone-500 mb-4">Deixe uma flor virtual em memória de Ede Curitiba</p>
+        <!-- HOMENAGEM DE FLORES -->
+        <section class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-stone-200/80 text-center relative overflow-hidden">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-amber-500 rounded-b-full"></div>
+            
+            <span class="text-2xl mb-1 block">🌿</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mb-1">Preste sua Homenagem</h2>
+            <p class="text-xs text-stone-500 mb-6">Deixe uma flor virtual em memória de Ede Curitiba</p>
 
-            <button onclick="deixarFlor()" class="w-full sm:w-auto bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-8 rounded-xl transition shadow-md flex items-center justify-center gap-2 mx-auto">
-                <span class="text-lg">🌷</span> Deixar uma Flor
+            <button onclick="deixarFlor()" class="w-full sm:w-auto bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-medium py-3.5 px-8 rounded-2xl transition shadow-md hover:shadow-lg flex items-center justify-center gap-2 mx-auto transform hover:-translate-y-0.5 active:translate-y-0">
+                <span class="text-xl">🌷</span> Deixar uma Flor
             </button>
-            <p class="text-xs text-stone-600 mt-3 font-medium">
-                <span id="contador-flores" class="font-bold text-amber-700">0</span> homenagens prestadas.
+            <p class="text-xs text-stone-600 mt-4 font-medium">
+                <span id="contador-flores" class="font-bold text-amber-700 text-sm">0</span> homenagens prestadas até o momento.
             </p>
         </section>
 
-        <!-- SEÇÃO DA GALERIA DE FOTOS (COM O ÁLBUM DO GOOGLE FOTOS) -->
-        <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-stone-200 text-center">
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mb-2">Galeria de Memórias</h2>
-            <p class="text-stone-500 text-sm mb-6">Veja todas as fotos e momentos especiais da trajetória de Ede Curitiba.</p>
-            <div class="w-10 h-0.5 bg-amber-600 mx-auto mb-6"></div>
+        <!-- SEÇÃO DE RECORDAÇÕES / MENSAGEM DA FAMÍLIA -->
+        <section class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-stone-200/80 text-center relative">
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mb-3">Tributo & Saudades</h2>
+            <div class="h-px w-20 mx-auto ornament-line mb-4"></div>
+            
+            <p class="text-stone-600 text-sm sm:text-base leading-relaxed italic font-serif px-2">
+                "Seus ensinamentos, seu carinho e sua presença marcante continuam vivos na memória e no coração de todos que tiveram o privilégio de conviver com ele."
+            </p>
+        </section>
 
-            <a href="https://photos.app.goo.gl/mswmTvYvxxtUhsRJA" target="_blank" class="block w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-3.5 px-6 rounded-xl transition shadow-md text-sm flex items-center justify-center gap-2">
-                <span>📸</span> Acessar Álbum de Fotos Completo
+        <!-- GALERIA DE FOTOS INTEGRADA (GOOGLE FOTOS) -->
+        <section class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-stone-200/80 text-center">
+            <span class="text-2xl mb-1 block">🕊️</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mb-2">Galeria de Memórias</h2>
+            <p class="text-stone-500 text-sm mb-6">Veja todas as fotos e momentos inesquecíveis da trajetória de Ede Curitiba.</p>
+            
+            <div class="h-px w-16 mx-auto ornament-line mb-6"></div>
+
+            <a href="https://photos.app.goo.gl/cg8wTXhpbAJisF6U9" target="_blank" class="block w-full bg-stone-900 hover:bg-stone-800 text-amber-100 font-medium py-4 px-6 rounded-2xl transition shadow-md text-sm flex items-center justify-center gap-3 border border-amber-600/30 group">
+                <span class="text-lg group-hover:scale-110 transition duration-200">📸</span> 
+                <span>Acessar Álbum de Fotos Completo</span>
             </a>
         </section>
 
     </main>
 
-    <!-- RODAPÉ -->
-    <footer class="bg-stone-900 text-stone-400 py-6 text-center text-xs border-t border-stone-800">
-        <p>Memorial Digital dedicado com todo respeito a Ede Curitiba.</p>
+    <!-- RODAPÉ ORNAMENTADO -->
+    <footer class="bg-stone-900 text-stone-400 py-8 text-center text-xs border-t border-amber-600/30">
+        <div class="max-w-xl mx-auto px-4 space-y-2">
+            <p class="font-serif italic text-stone-300 text-sm">Ede Curitiba • 1948 – 2025</p>
+            <p class="text-stone-500 text-[11px]">Memorial Digital mantido com carinho pela família.</p>
+        </div>
     </footer>
 
     <!-- SCRIPT DO CONTADOR DE FLORES -->
@@ -82,7 +118,7 @@
             total += 1;
             localStorage.setItem('total_flores_ede', total);
             document.getElementById('contador-flores').innerText = total;
-            alert('Sua flor foi deixada com carinho em memória de Ede Curitiba 🌷');
+            alert('Sua flor foi deixada com todo o carinho em memória de Ede Curitiba 🌷');
         }
 
         window.onload = atualizarContador;
